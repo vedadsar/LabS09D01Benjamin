@@ -34,6 +34,7 @@ public class GUIBinaryGame extends JFrame {
 	private static int counter;
 	private static JFrame window;
 	private static JButton restart;
+	private static JTextField saveYourText;
 	
 	
 	
@@ -59,7 +60,7 @@ public class GUIBinaryGame extends JFrame {
 	higher = new JButton("Higher");		//Higher dugme klikamo ukoliko je nas broj veci od pokusjaa racunara
 	restart = new JButton("Restart");
 	
-	textCounter = new JLabel("Guesses: " +counter);
+	textCounter = new JLabel("Guesses: " +counter +"      ");
 	textCounter.setFont(new Font("Arial", Font.ITALIC, 28));
 	
 
@@ -70,6 +71,8 @@ public class GUIBinaryGame extends JFrame {
 	text.setBackground(Color.darkGray);
 	text.setFont(new Font("Arial", Font.BOLD,35));
 	
+	saveYourText = new JTextField("Save your number");
+	saveYourText.setFont(new Font("Arial", Font.BOLD, 12));
 	
 	
 	window.setLayout(new FlowLayout());	
@@ -79,6 +82,7 @@ public class GUIBinaryGame extends JFrame {
 	window.add(correct);
 	window.add(restart);
 	window.add(textCounter);
+	window.add(saveYourText);
 	
 	window.setSize(450, 150);
 	window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -122,7 +126,7 @@ public class GUIBinaryGame extends JFrame {
 				endPosition = middleIndex - 1;
 				middleIndex = (startPosition + endPosition) / 2;
 			    text.setText("Is this your number " +middleIndex +"?" );
-			    textCounter.setText("Guesses " +counter);
+			    textCounter.setText("Guesses " +counter +"      ");
 									
 			}
 			//Uslov ukoliko je kliknuto dugme higher
@@ -131,7 +135,7 @@ public class GUIBinaryGame extends JFrame {
 				startPosition = middleIndex + 1;
 				middleIndex = (startPosition + endPosition) / 2;
 			    text.setText("Is this your number " +middleIndex +"? ");
-			    textCounter.setText("Guesses " +counter);
+			    textCounter.setText("Guesses " +counter +"      ");
 									
 			}
 			//Ukoliko je kliknuto dugme correct.
