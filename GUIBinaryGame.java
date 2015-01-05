@@ -47,11 +47,12 @@ public class GUIBinaryGame extends JFrame {
 	 higher = new JButton("Higher");		//Higher dugme klikamo ukoliko je nas broj veci od pokusjaa racunara
 	text = new JTextField("Da li je vas broj " +middleIndex +"? ");		//Postavljamo text 
 	text.setEnabled(false);					//Stavljamo da se tekst ne moze editovati od korisnika
+	text.setHorizontalAlignment(JTextField.CENTER);
 	
 	window.setLayout(new BorderLayout());	
 	window.add(text, BorderLayout.NORTH);
-	window.add(lower, BorderLayout.EAST);
-	window.add(higher,BorderLayout.WEST);
+	window.add(lower, BorderLayout.WEST);
+	window.add(higher,BorderLayout.EAST);
 	window.add(correct,BorderLayout.CENTER);
 	window.setSize(500, 150);
 	window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -94,7 +95,7 @@ public class GUIBinaryGame extends JFrame {
 			}
 			//Ukoliko je kliknuto dugme correct.
 			if(e.getSource() == correct)
-			text.setText("Cestitamo pogodili ste");
+			text.setText("Pogodio sam :D :D :D ");
 		}
 	}
 	
