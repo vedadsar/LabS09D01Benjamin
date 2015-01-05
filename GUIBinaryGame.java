@@ -8,11 +8,14 @@ import java.awt.event.ActionListener;
 
 
 
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+
+import sun.awt.RepaintArea;
 
 import com.sun.net.ssl.internal.www.protocol.https.Handler;
 
@@ -65,7 +68,7 @@ public class GUIBinaryGame extends JFrame {
 	text.setEnabled(false);					//Stavljamo da se tekst ne moze editovati od korisnika
 	text.setHorizontalAlignment(JTextField.CENTER);
 	text.setBackground(Color.darkGray);
-	text.setFont(new Font("Arial", Font.BOLD, 32));
+	text.setFont(new Font("Arial", Font.BOLD,35));
 	
 	
 	
@@ -91,6 +94,8 @@ public class GUIBinaryGame extends JFrame {
 	higher.addActionListener(handler);
 	restart.addActionListener(handler);
 	
+
+	
 }
 		
 	public static void restart(){
@@ -108,6 +113,7 @@ public class GUIBinaryGame extends JFrame {
 	 *
 	 */
 	public static class ButtonHandler implements ActionListener{
+		
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			// Uslov ukoliko je kliknuto dugme lower
@@ -131,7 +137,9 @@ public class GUIBinaryGame extends JFrame {
 			//Ukoliko je kliknuto dugme correct.
 			if(e.getSource() == correct){
 			text.setText("Thats the number :)");
-			window.removeAll();			
+			
+			
+			
 			}
 			
 			//Ukoliko je kliknuto dugme correct.
