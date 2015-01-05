@@ -1,5 +1,6 @@
 import java.awt.BorderLayout;
 import java.awt.Button;
+import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridLayout;
@@ -54,7 +55,9 @@ public class GUIBinaryGame extends JFrame {
 	text = new JTextField("Da li je vas broj " +middleIndex +"? ");		//Postavljamo text 
 	text.setEnabled(false);					//Stavljamo da se tekst ne moze editovati od korisnika
 	text.setHorizontalAlignment(JTextField.CENTER);
-	text.setFont(new Font("Arial", Font.BOLD, 28));
+	text.setBackground(Color.darkGray);
+	text.setFont(new Font("Arial", Font.BOLD, 32));
+	
 	
 	window.setLayout(new FlowLayout());	
 	window.add(text);
@@ -62,7 +65,7 @@ public class GUIBinaryGame extends JFrame {
 	window.add(higher);
 	window.add(correct);
 	window.add(textCounter);
-	window.setSize(350, 150);
+	window.setSize(365, 150);
 	window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	window.setResizable(false);
 	window.setLocation(500, 500);
@@ -107,7 +110,7 @@ public class GUIBinaryGame extends JFrame {
 			}
 			//Ukoliko je kliknuto dugme correct.
 			if(e.getSource() == correct)
-			text.setText("Pogodio sam :D :D :D ");
+			text.setText("Pogodio sam :D");
 		}
 	}
 	
